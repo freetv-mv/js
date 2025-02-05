@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free TV</title>
-        <link rel="icon" href="logo.png" type="image/png">
+        <link rel="icon" href="icon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto+Slab&family=DM+Sans&display=swap" rel="stylesheet">
     <style>
         body {
@@ -38,6 +38,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
             overflow: hidden;
             width: 250px;
+            height: 380px;
             text-align: center;
             transform: scale(0.9);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -50,7 +51,7 @@
 
         .channel-image {
             width: 100%;
-            height: 150px;
+            height: 280px;
             object-fit: cover;
         }
 
@@ -175,41 +176,34 @@
 </head>
 <body>
 
-<header>FREE TV</header>
+<header>
+    <img src="logo.png" alt="Free TV Logo" style="max-width: 200px; height: auto;">
+</header>
 
 <div class="channels-container">
     <!-- Channel Boxes -->
     <script>
         const channels = [
-            { name: "Dhaaris TV", image: "dhaaris.png", url: "https://www.youtube.com/watch?v=bmi_zHJRaQA", isYouTube: true },
+            { name: "Dhaaris TV", image: "dhaaris.png", url: "https://www.youtube.com/watch?v=JtUdC98kj9s", isYouTube: true },
             { name: "TVM", image: "tvm.png", url: "https://customer-ujex1meek7koqd9x.cloudflarestream.com/9e93379c0d46ee588b99263d95bd9c42/manifest/video.m3u8" },
             { name: "SSNET", image: "ssnet.png", url: "https://sstv.ssplay.mv/hls/sstv-live/index.m3u8" },
             { name: "MMTV", image: "mmtv.png", url: "https://sendlive.online/hls/mmtv.m3u8" },
             { name: "Raajje TV", image: "raajje.png", url: "https://stream.raajje.mv/live/rtv_live/index.m3u8" },
-            { name: "VTV", image: "vtv.png", url: "https://vtvstream.vnews.mv/vtvlive/vmedia/playlist.m3u8" },
-            { name: "Channel 13", image: "channel13.png", url: "https://stream.theyraonline.com/live/channel13@live/index.m3u8" },
+            { name: "Channel 13", image: "channel13.png", url: "https://stream.theyraonline.com/aa3d8051-4cd9-462d-b077-fa45e78ada99" },
             { name: "YES TV", image: "yestv.png", url: "https://customer-ujex1meek7koqd9x.cloudflarestream.com/4f0b316cdb0fbb7f8ca93860ed11d38b/manifest/video.m3u8" },
             { name: "PSM News", image: "psm.png", url: "https://customer-ujex1meek7koqd9x.cloudflarestream.com/21262545317dadfa20dab4f9bd37c7c2/manifest/video.m3u8" },
-            { name: "Asian Food Network", image: "afn.png", url: "https://stream.theyraonline.com/live/channel13@live/index.m3u8" },
-            { name: "Disney Jr", image: "disneyjr.png", url: "http://fl5.moveonjoy.com/DISNEY_JR/index.m3u8" },
+            { name: "Disney Jr", image: "disneyjr.png", url: "https://xyzdddd.mizhls.ru/lb/premium652/index.m3u8" },
             { name: "Nick Jr", image: "nickjr.png", url: "http://fl2.moveonjoy.com/NICK_JR/index.m3u8" },
             { name: "Nickelodeon", image: "nickelodeon.png", url: "http://45.235.0.78/NICK-HD/index.m3u8" },
             { name: "Boomerang", image: "boomerang.png", url: "http://fl3.moveonjoy.com/BOOMERANG/index.m3u8" },
-            { name: "Dreamworks", image: "dreamworks.png", url: "http://ott.bonnylocust.box.ca/stream/iptv/dreamworkstagalized/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
             { name: "Cartoon Network", image: "cn.png", url: "http://45.235.0.78/CARTOON-HD/index.m3u8" },
-            { name: "Moonbug", image: "moonbug.png", url: "https://moonbug-rokuus.amagi.tv/playlist.m3u8" },
             { name: "ZooMoo", image: "zoomoo.png", url: "https://zoomoo-samsungau.amagi.tv/playlist.m3u8" },
-            { name: "Cinemax", image: "cinemax.png", url: "http://ott.bonnylocust.box.ca/stream/iptv/cinemax/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
             { name: "Crime+Investigation", image: "crime.png", url: "http://fl3.moveonjoy.com/Crime_and_Investigation_Network/index.m3u8" },
             { name: "Al-Jazeera Arabic", image: "aj-arb.png", url: "https://live-hls-web-ajm.getaj.net/AJM/index.m3u8" },
             { name: "Al-Jazeera English", image: "aj-eng.png", url: "https://live-hls-web-aje.getaj.net/AJE/index.m3u8" },
-            { name: "DW", image: "dw.png", url: "http://ott.bonnylocust.box.ca/stream/iptv/dw/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
-            { name: "Animal Planet", image: "animal planet.png", url: "http://172.16.29.250/hls/Star_Sport_Select1HD.m3u8" },
+            { name: "Animal Planet", image: "animal planet.png", url: "hhttp://fl2.moveonjoy.com/Animal_Planet/index.m3u8" },
             { name: "BBC World News", image: "bbc.png", url: "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/mobile_wifi_main_sd_abr_v2.m3u8" },
-            { name: "BBC Earth", image: "bbcearth.png", url: "http://ott.bonnylocust.box.ca/stream/iptv/bbcearth/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
-            { name: "BBC Lifestyle", image: "bbclife.png", url: "http://ott.bonnylocust.box.ca/stream/iptv/bbclifestyle/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
             { name: "Sky News", image: "sky.png", url: "https://linear417-gb-hls1-prd-ak.cdn.skycdp.com/100e/Content/HLS_001_1080_30/Live/channel(skynews)/index_1080-30.m3u8" },
-            { name: "CNBC", image: "cnbc.png", url: "http://ott.bonnylocust.box.ca/stream/iptv/cnbc/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
             { name: "CNN", image: "cnn.png", url: "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8" },
             { name: "Premier League", image: "premier.png", url: "https://ott.djdoolky76.net/stream/iptv/premierleague/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
             { name: "Bein Sports 1", image: "beinp1.png", url: "https://ott.djdoolky76.net/stream/iptv/beinsports1/master.m3u8?u=civ3&p=62278b4ff378172012f0fa4b0950ca4a6602b07485651181385d4616936cf859" },
@@ -220,17 +214,70 @@
     
         channels.forEach(channel => {
             document.write(`
-                <div class="channel-box">
+                <div class="channel-box" onclick="playChannel('${channel.url}', ${channel.isYouTube || false}, '${channel.name}')">
                     <img class="channel-image" src="${channel.image}" alt="${channel.name}">
                     <div class="channel-content">
                         <div class="channel-name">${channel.name}</div>
-                        <button class="play-button" onclick="playChannel('${channel.url}', ${channel.isYouTube || false}, '${channel.name}')">
-                            <img src="play.svg" alt="Play">
-                        </button>
                     </div>
                 </div>
             `);
         });
+
+        const channelsContainer = document.getElementById('channels-container');
+        channels.forEach(channel => {
+            const channelBox = document.createElement('div');
+            channelBox.classList.add('channel-box');
+            channelBox.setAttribute('onclick', `playChannel('${channel.url}', ${channel.isYouTube || false}, '${channel.name}')`);
+            channelBox.innerHTML = `
+                <img class="channel-image" src="${channel.image}" alt="${channel.name}">
+                <div class="channel-content">
+                    <div class="channel-name">${channel.name}</div>
+                </div>
+            `;
+            channelsContainer.appendChild(channelBox);
+        });
+
+        let selectedIndex = 0;
+
+        function highlightChannel(index) {
+            const boxes = document.querySelectorAll('.channel-box');
+            boxes.forEach((box, i) => {
+                box.style.transform = i === index ? 'scale(1.1)' : 'scale(0.9)';
+                box.style.boxShadow = i === index ? '0 8px 20px rgba(0, 0, 0, 0.6)' : '0 5px 15px rgba(0, 0, 0, 0.4)';
+            });
+        }
+
+        function playChannel(url, isYouTube, channelName) {
+            console.log(`Playing ${channelName} from URL: ${url}`);
+            // Implement play logic
+        }
+
+        document.addEventListener('keydown', (event) => {
+            const boxes = document.querySelectorAll('.channel-box');
+            const rowLength = Math.floor(window.innerWidth / 270);  // Adjust row length based on screen size
+
+            if (event.key === 'ArrowRight') {
+                if (selectedIndex % rowLength !== rowLength - 1) {
+                    selectedIndex++;
+                }
+            } else if (event.key === 'ArrowLeft') {
+                if (selectedIndex % rowLength !== 0) {
+                    selectedIndex--;
+                }
+            } else if (event.key === 'ArrowDown') {
+                if (selectedIndex + rowLength < boxes.length) {
+                    selectedIndex += rowLength;
+                }
+            } else if (event.key === 'ArrowUp') {
+                if (selectedIndex - rowLength >= 0) {
+                    selectedIndex -= rowLength;
+                }
+            }
+
+            highlightChannel(selectedIndex);
+        });
+
+        highlightChannel(selectedIndex);
 
         function playChannel(url, isYouTube, channelName) {
             const videoPlayer = document.getElementById('player-overlay');
@@ -255,34 +302,33 @@
                 youtubeFrame.style.display = 'none';
                 video.style.display = 'block';
 
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(url);
-                hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                    video.play().then(() => {
-                        requestFullScreen(video);
+                if (Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(url);
+                    hls.attachMedia(video);
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        video.play().then(() => {
+                            requestFullScreen(video);
                         }).catch(err => console.error("Playback failed:", err));
                     });
                 } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = url;
+                    video.src = url;
                     video.play().then(() => {
                         requestFullScreen(video);
                     }).catch(err => console.error("Playback failed:", err));
+                }
             }
 
-                function requestFullScreen(video) {
-                    if (video.requestFullscreen) {
-                        video.requestFullscreen();
-                    } else if (video.webkitRequestFullscreen) {
-                        video.webkitRequestFullscreen();
-                    } else if (video.mozRequestFullScreen) {
-                        video.mozRequestFullScreen();
-                    } else if (video.msRequestFullscreen) {
-                        video.msRequestFullscreen();
-                    }
+            function requestFullScreen(video) {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen();
+                } else if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();
                 }
-
             }
         }
 
@@ -325,9 +371,9 @@
 
 <footer>
     <div class="contact">
-        <p>&copy; 2025 Free TV. All rights reserved.</p>
+        <p>&copy; 2025 TV MV. All rights reserved.</p>
     </div>
-    <a href="https://t.me/freetv_mv" target="_blank" class="telegram-frame">
+    <a href="https://t.me/free_tvmv" target="_blank" class="telegram-frame">
         <img src="telegram.png" alt="Telegram Channel">
     </a>
 </footer>
