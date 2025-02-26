@@ -261,7 +261,7 @@
 
         document.addEventListener('keydown', (event) => {
             const boxes = document.querySelectorAll('.channel-box');
-            const rowLength = Math.floor(window.innerWidth / 270);  // Adjust row length based on screen size
+            const rowLength = Math.floor(window.innerWidth / 270);
 
             if (event.key === 'ArrowRight') {
                 if (selectedIndex % rowLength !== rowLength - 1) {
